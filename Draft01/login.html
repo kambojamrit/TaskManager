@@ -1,0 +1,49 @@
+<!---Name: Amritpal Kaur-->
+<!--Section - 300 CST8285-->
+<!--Description: This is the page where a user will login with a username and password thet used to register to add tasks to the task manager.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Task Management Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="login.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+           <li><a href="index.html">Home</a></li>
+         <li><a href="tasks.html">Tasks</a></li>
+           <li><a href="login.html">Login</a></li>
+           </ul>
+       </nav>
+        <h1>Login to view your tasks!!</h1>
+    </header>
+    <main>
+
+        <section id="login">
+            <h2>Login</h2>
+            <form id="loginForm" action="login.php" method="POST">
+                
+                <div class="textfield">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <span id="username-error" class="error-message"></span>
+                </div>
+                
+            </div="textfield">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <span id="password-error" class="error-message"></span>
+            </div>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!---Name: Amritpal Kaur-->
+<!--Section - 300 CST8285-->
+<!--Description: This is the page where a user will register with a username and password to add tasks to the task manager.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Task Management Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="register.js" defer> </script>
+</head>
+<body>
+    <header>
+        <nav>
+             <ul>
+            <li><a href="index.html">Home</a></li>
+          <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+<div id="error" class="error"></div>    
+        <h1>Register</h1>
+    </header>
+    <main>
+        <section id="registration">
+                <form id="registrationForm" action="register.php" method="POST">
+                 
+                <div class="textfield">    
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <span id="username-error" class="error-message"></span>
+                </div>
+
+                <div class="textfield">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <span id="password-error" class="error-message"></span>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>

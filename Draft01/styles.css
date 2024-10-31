@@ -1,0 +1,225 @@
+/*Stylesheet for the Task Management Application pages
+*/
+body {                                                      
+    font-family: Arial, sans-serif;
+    background-color:#f6ebdd;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #45a049;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff6200;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+header, main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label, input, select, textarea, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ad0606;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #533747;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#taskFormContainer, #tasksListContainer {
+    width: 48%;
+    background-color: #fffffe;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Ensure text fields are the same size */
+input, select, textarea {
+    width: calc(100% - 22px); /* Adjusted to fit inside the padding */
+    box-sizing: border-box;
+}
+
+.task {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.task button {
+    background-color: #ad0606;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.task button:hover {
+    background-color: #533747;
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #taskFormContainer, #tasksListContainer {
+        width: 100%;
+    }
+}
+
+/**button container **/
+
+/* Ensure body background color is set */
+#login {
+    background-color: #fffffe;
+    padding: 20px;
+    border: 5px solid #060000;
+    border-radius: 5px;
+    max-width: 600px; /* Center the form */
+    margin: 0 auto; /* Center the form */
+}
+
+#login h2 {
+    text-align: center;
+}
+
+label, input {
+    display: block;
+    width: calc(100% - 22px); /* Adjusted to fit inside the padding */
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: auto;
+    padding: 10px 20px; /* Smaller button */
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto; /* Center the button */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 800px) {
+    #login {
+        width: 100%;
+    }
+}
+
+/** Registration page **/
+
+#registration {
+    background-color: #fffffe;
+    padding: 20px;
+    border: 5px solid #060000;
+    border-radius: 5px;
+    max-width: 600px; /* Center the form */
+    margin: 0 auto; /* Center the form */
+}
+
+#registration h2 {
+    text-align: center;
+}
+
+label, input {
+    display: block;
+    width: calc(100% - 22px); /* Adjusted to fit inside the padding */
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: auto;
+    padding: 10px 20px; /* Smaller button */
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto; /* Center the button */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    margin-top: -10px;  /* Adjust spacing */
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: red;
+}

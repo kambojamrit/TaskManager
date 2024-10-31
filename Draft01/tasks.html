@@ -1,0 +1,60 @@
+<!---Name: Amritpal Kaur-->
+<!--Section - 300 CST8285-->
+<!--Description: User will be redirected after logging in to this page. Here user can add/display and remove tasks. 
+                They can also filter the tasks based on priority and due date.-->
+                
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+           <li><a href="index.html">Home</a></li>
+         <li><a href="tasks.html">Tasks</a></li>
+           <li><a href="login.html">Login</a></li>
+           </ul>
+       </nav>
+        <h1>Your Task Manager</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section id="taskFormContainer">
+                <h2>Task Manager</h2>
+                <form id="taskForm" action="tasks.php" method="post">
+                    <input type="text" id="title" name="title" placeholder="Task Title" required>
+                    <textarea id="description" name="description" placeholder="Task Description"></textarea>
+                    <select id="priority" name="priority" required>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <input type="date" id="due_date" name="due_date" required>
+                    <button type="submit">Add Task</button>
+                </form>
+                <div id="filters">
+                    <h3>Filter Tasks</h3>
+                    <select id="filterPriority">
+                        <option value="">All Priorities</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <input type="date" id="filterDueDate">
+                    <button id="applyFilters">Apply Filters</button>
+                </div>
+            </section>
+            <section id="tasksListContainer">
+                <h2>Your Tasks</h2>
+                <div id="tasksList"></div>
+            </section>
+        </div>
+    </main>
+    <script src="tasks.js"></script>
+</body>
+</html>
